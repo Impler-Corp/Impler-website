@@ -1,0 +1,96 @@
+:root {
+    --primary: #D80032;
+    --secondary: #EF233C;
+    --light-grey: #EDF2F4;
+    --dark-grey: #8D99AE;
+    --dark: #2B2D42;
+
+    --white: #FFFFFF;
+    --black: #000000;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: nevis;
+    src: url('../assets/fonts/Nevis.otf');
+}
+
+body {
+    font-family: 'Nunito Sans',
+        sans-serif;
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* Navigation */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.brand-name {
+    font-size: 20px;
+    font-family: nevis;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav>* {
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--secondary);
+}
+
+.nav-btn {
+    background: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--secondary);
+    transition: 200ms ease-in-out;
+}
+
+.nav-btn:hover {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+@media only screen and (max-width: 400px) {
+    header {
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+}
