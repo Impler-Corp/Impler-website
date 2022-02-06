@@ -1,5 +1,6 @@
-const nav = document.querySelector('nav');
+const nav = document.querySelector("nav");
 
 function toggle() {
-    nav.classList.toggle('scale');
+  nav.classList.toggle("display");
+  nav.classList.toggle("translate");
 }
