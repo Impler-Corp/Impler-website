@@ -24,46 +24,45 @@
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Script -->
+    <script src="./js/index.js" defer></script>
+
 </head>
 
 <body>
 
     <!-- Navigation bar -->
-    <header>
-        <div class="logo">
+    <header class="primary-header flex container">
+        <div class="logo flex">
             <img src="./assets/Images/logo.png" alt="logo">
             <h1 class="brand-name">IMPLER</h1>
         </div>
-        <nav>
-            <div class="menu-close">
-                <i class="fas fa-times" onclick="toggle()"></i>
-            </div>
-            <a href="#about" class="nav-link" onclick="toggle()">About</a>
-            <a href="#" class="nav-link" onclick="toggle()">Services</a>
-            <a href="#" class="nav-link" onclick="toggle()">Works</a>
-            <a href=""><button class="nav-btn">Contact</button></a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        </button>
+        <nav id="primary-nav" class="primary-nav flex" data-visible="false">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#" class="nav-link">Services</a>
+            <a href="#" class="nav-link">Works</a>
+            <a href=""><button class="btn btn-light">Contact</button></a>
         </nav>
-        <div class="menu-open">
-            <i class="fas fa-bars" onclick="toggle()"></i>
-        </div>
     </header>
 
     <!-- Home Section -->
-    <section class="home">
-        <div class="bg">
+    <section class="home flex container">
+        <!-- <div class="bg">
             <img src="./assets/Images/home-bg.png" alt="bg">
-        </div>
-        <div class="main-content">
+        </div> -->
+        <div class="main-content flex">
             <h1>Innovation In Implementation</h1>
             <p>We help startups to reshape their workspace culture online.</p>
-            <div class="cta-buttons">
+            <div class="cta-buttons flex">
                 <a href="#">
-                    <button class="btn-cta">
+                    <button class="btn">
                         Project Request
                     </button>
                 </a>
                 <a href="#">
-                    <button class="btn-cta btn-cta-light">
+                    <button class="btn btn-light">
                         Let's talk
                     </button>
                 </a>
@@ -109,9 +108,6 @@
     <footer>
 
     </footer>
-
-    <!-- Script -->
-    <script src="./js/index.js"></script>
 </body>
 
 </html>
