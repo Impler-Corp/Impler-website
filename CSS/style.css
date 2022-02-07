@@ -17,6 +17,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden !important; 
 }
 
 ::-moz-selection {
@@ -54,7 +55,6 @@ html {
 body {
   font-family: "Nunito Sans", sans-serif;
   font-size: 18px;
-  overflow-x: hidden;
 }
 
 a {
@@ -273,6 +273,7 @@ nav > * {
   background: none;
   border: 2px solid var(--secondary);
   color: var(--dark);
+  height: 48px;
   transition: all 0.5s ease;
 }
 
