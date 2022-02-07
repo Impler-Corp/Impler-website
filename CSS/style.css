@@ -36,12 +36,6 @@ html {
   src: url("../assets/fonts/Nevis.otf");
 }
 
-body {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 18px;
-  overflow-x: hidden;
-}
-
 /* Custom Scroll Bar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -55,6 +49,12 @@ body {
 ::-webkit-scrollbar-thumb {
   background-image: linear-gradient(var(--primary), var(--secondary));
   border-radius: 10px;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
+  overflow-x: hidden;
 }
 
 a {
@@ -191,6 +191,7 @@ nav > * {
   nav {
     position: absolute;
     opacity: 0;
+    visibility: hidden;
     top: 0;
     right: 0;
     height: 100vh;
@@ -206,6 +207,7 @@ nav > * {
   }
 
   .display {
+    visibility: visible;
     opacity: 1;
   }
 }
@@ -218,9 +220,11 @@ nav > * {
   position: relative;
   height: 100vh;
   margin: 0 6rem 0;
+  backdrop-filter: blur(20rem);
 }
 
 .bg {
+  filter: blur(4px);
   position: absolute;
   height: 100%;
   width: 100%;
