@@ -19,6 +19,17 @@ html {
   scroll-behavior: smooth;
 }
 
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--light-grey);
+  background: var(--secondary);
+}
+
+::selection {
+  color: var(--light-grey);
+  background: var(--secondary);
+}
+
 /* Font Face */
 @font-face {
   font-family: nevis;
@@ -76,6 +87,10 @@ header {
   align-items: center;
   gap: 10px;
   cursor: pointer;
+}
+
+.logo img {
+  width: 38px;
 }
 
 .brand-name {
@@ -149,11 +164,15 @@ nav > * {
 @media only screen and (max-width: 820px) {
   header {
     padding: 1rem 2rem;
-    align-items: flex-start;
+    align-items: center;
   }
 
-  .logo-img {
+  .logo img {
     width: 28px;
+  }
+
+  .brand-name {
+    font-size: 1em;
   }
 
   .menu-close {
@@ -230,6 +249,7 @@ nav > * {
 .cta-buttons {
   display: flex;
   gap: 40px;
+  margin-top: 1.8rem;
 }
 
 .btn-cta {
@@ -237,8 +257,8 @@ nav > * {
   appearance: none;
   cursor: pointer;
   border-radius: 5px;
-  margin-top: 1.8rem;
-  padding: 8px 16px;
+  min-width: 6rem;
+  padding: 12px 20px;
   font-size: 18px;
   background-color: var(--secondary);
   color: var(--white);
@@ -312,8 +332,15 @@ nav > * {
     width: 80%;
   }
 
+  .cta-buttons {
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+  }
+
   .btn-cta {
-    font-size: 0.8em;
+    padding: 8px 16px;
+    font-size: 16px;
   }
 }
 
