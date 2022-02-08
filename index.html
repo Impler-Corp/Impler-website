@@ -14,7 +14,7 @@
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap" rel="stylesheet">
 
     <!-- StyleSheet -->
     <link rel="stylesheet" href="./CSS/style.css">
@@ -37,13 +37,13 @@
             <img src="./assets/Images/logo.png" alt="logo">
             <h1 class="brand-name">IMPLER</h1>
         </div>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" onclick="toggleNav()">
         </button>
         <nav id="primary-nav" class="primary-nav flex" data-visible="false">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#" class="nav-link">Services</a>
-            <a href="#" class="nav-link">Works</a>
-            <a href=""><button class="btn btn-light">Contact</button></a>
+            <a href="#about" class="nav-link" onclick="toggleNav()">About</a>
+            <a href="#services" class="nav-link" onclick="toggleNav()">Services</a>
+            <a href="#" class="nav-link" onclick="toggleNav()">Works</a>
+            <a href="#" onclick="toggleNav()"><button class="btn btn-light">Contact</button></a>
         </nav>
     </header>
 
@@ -87,8 +87,43 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services">
-
+    <section id="services" class="services container flex">
+        <div class="services-head">
+            <p class="services-sub">What We Do</p>
+            <h1 class="services-title">Our Best Services</h1>
+            <p class="services-desc">Some of our Best Serivices we provide to make
+            every startups to stand out from the crowd!</p>
+        </div>
+        <div class="cards grid">
+            <div class="card">
+                <img src="./assets/Images/service-branding.png" alt="service-image">
+                <div class="card-content">
+                    <h1 class="card-content_head">Branding</h1>
+                    <p class="card-content_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi alias suscipit aliquam soluta magnam, illum amet minus veritatis dicta dolor!</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./assets/Images/service-dev.png" alt="service-image">
+                <div class="card-content">
+                    <h1 class="card-content_head">Development</h1>
+                    <p class="card-content_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi alias suscipit aliquam soluta magnam, illum amet minus veritatis dicta dolor!</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./assets/Images/service-marketing.png" alt="service-image">
+                <div class="card-content">
+                    <h1 class="card-content_head">Marketing</h1>
+                    <p class="card-content_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi alias suscipit aliquam soluta magnam, illum amet minus veritatis dicta dolor!</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./assets/Images/service-design.png" alt="service-image">
+                <div class="card-content">
+                    <h1 class="card-content_head">Designing</h1>
+                    <p class="card-content_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi alias suscipit aliquam soluta magnam, illum amet minus veritatis dicta dolor!</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- CTA Section -->

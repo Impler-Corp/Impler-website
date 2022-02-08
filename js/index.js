@@ -6,7 +6,7 @@ window.addEventListener("scroll", () => {
   primaryHeader.classList.toggle("sticky", window.scrollY > 0);
 });
 
-navToggle.addEventListener("click", () => {
+function toggleNav() {
   const visiblity = nav.getAttribute("data-visible");
   if (visiblity === "false") {
     nav.setAttribute("data-visible", true);
@@ -15,4 +15,6 @@ navToggle.addEventListener("click", () => {
     nav.setAttribute("data-visible", false);
     navToggle.setAttribute("aria-expanded", false);
   }
-});
+}
+
+navToggle.addEventListener("click", () => {});
