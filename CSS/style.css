@@ -334,7 +334,7 @@ select {
 @media (max-width: 45rem) {
   .home {
     flex-direction: column;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .main-content {
@@ -342,68 +342,6 @@ select {
     text-align: center;
   }
 }
-
-/* @media only screen and (min-width: 1600px) {
-  .main-content h1 {
-    font-size: 3.5em;
-  }
-
-  .main-content p {
-    font-size: 1.2rem;
-    width: 50%;
-  }
-} */
-
-/* Home Media queries */
-/* @media only screen and (max-width: 820px) {
-  .home {
-    height: fit-content;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2em;
-    gap: 40px;
-    margin: 2rem 0 0;
-  }
-
-  .bg {
-    display: none;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .hero-img {
-    width: 50%;
-    align-self: center;
-  }
-
-  .main-content {
-    align-items: center;
-    text-align: center;
-  }
-
-  .main-content h1 {
-    font-size: inherit;
-    font-weight: 600;
-  }
-
-  .main-content p {
-    font-size: 0.8em;
-    width: 80%;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-    gap: 14px;
-    justify-content: center;
-  }
-
-  .btn-cta {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-} */
 
 /* About Section */
 .about {
@@ -485,3 +423,6 @@ select {
   width: 100%;
   height: 100vh;
 }
+
+/* Reference */
+/* https://youtu.be/HbBMp6yUXO0 */
