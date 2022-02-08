@@ -56,6 +56,22 @@ dd {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-size: 2.4em;
+}
+
+@media (max-width: 45rem) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: 1.4em;
+  }
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
@@ -64,6 +80,10 @@ ol[role="list"] {
 
 /* Set core root defaults */
 html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
@@ -156,16 +176,22 @@ select {
 
 /* primary-header */
 
-header{
-    width: 100%;
-    position: fixed;
-    margin: 0;
-}
-
 .primary-header {
+  /* background-color: var(--white); */
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   justify-content: space-between;
   align-items: center;
-  margin-block: 2rem;
+  padding-block: 2rem;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.sticky {
+  background-color: var(--white);
+  padding-block: 1rem;
 }
 
 .logo {
@@ -233,8 +259,16 @@ header{
 }
 
 @media (max-width: 45rem) {
-  .primary-header {
-    position: relative;
+  .logo {
+    gap: 0.5rem;
+  }
+
+  .logo img {
+    width: 28px;
+  }
+
+  .brand-name {
+    font-size: inherit;
   }
 
   .primary-nav {
@@ -256,11 +290,7 @@ header{
   .nav-toggle {
     display: block;
     cursor: pointer;
-    position: absolute;
     z-index: 2000;
-    top: 50%;
-    right: 5%;
-    transform: translate(-50%, -50%);
     background: transparent;
     background-image: url("../assets/Images/menu-open.svg");
     background-repeat: no-repeat;
@@ -285,36 +315,31 @@ header{
   background-repeat: no-repeat;
   background-size: contain;
   height: 100vh;
+  position: relative;
 }
 
 .main-content {
   flex-direction: column;
   align-items: flex-start;
-  font-size: 2em;
 }
 
 .main-content p {
-  font-size: 0.6em;
-  width: max(2rem, 60%);
+  width: 20rem;
 }
 
 .btn {
-  border: 0;
   appearance: none;
   cursor: pointer;
   border-radius: 5px;
-  min-width: 6rem;
+  min-width: 2rem;
   padding: 0.6rem 1.4rem;
-  font-size: 18px;
   background-color: var(--secondary);
   color: var(--white);
   border: 2px solid var(--secondary);
 }
 
 .btn-light {
-  background: none;
   background-color: var(--white);
-  border: 2px solid var(--secondary);
   color: var(--dark);
   transition: all 0.5s ease;
 }
@@ -329,15 +354,30 @@ header{
   width: 50%;
 }
 
+@media (max-width: 1100px) {
+  .home {
+    height: fit-content;
+    margin-top: 20%;
+  }
+}
+
 @media (max-width: 45rem) {
   .home {
     flex-direction: column;
-    font-size: 0.8rem;
+    background: none;
   }
 
   .main-content {
     align-items: center;
     text-align: center;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .hero-img {
+    align-self: center;
   }
 }
 
@@ -345,23 +385,24 @@ header{
 .about {
   background-color: var(--dark);
   width: 100%;
-  /* height: 100vh; */
+  height: 100vh;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 50px;
-  padding: 4rem 4rem 0;
-  /* !!!! Ask to ruban !!!! */
-  overflow: hidden;
+  gap: 2rem;
+  /* padding: 4rem 4rem 0; */
+  padding-inline: 4rem;
+  padding-top: 2rem;
 }
 
 .about-img {
+  max-width: 60%;
   align-self: flex-end;
 }
 
 .about-content {
+  align-self: center;
   color: var(--white);
-  padding: 2rem 0 4rem;
+  padding-block: 2rem 4rem;
 }
 
 .about-content > * {
@@ -373,45 +414,32 @@ header{
   letter-spacing: 0.8em;
 }
 
-.about-main {
-  font-weight: bold;
-  font-size: 2em;
+.about-title {
   padding-bottom: 1rem;
 }
 
-.about-desc {
-  line-height: 1.5;
-}
-
-@media only screen and (max-width: 820px) {
+@media (max-width: 1100px) {
   .about {
     height: fit-content;
+  }
+
+  .about-title {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 45rem) {
+  .about {
     flex-direction: column-reverse;
-    padding: 2rem 0 0;
-    gap: 20px;
-  }
-
-  .about-img {
-    /* !!!! Ask to ruban !!!! */
-    /* display: none; */
-    width: 60%;
-    align-self: flex-start;
-    padding: 0 2rem;
-  }
-
-  .about-content {
-    padding: 1rem;
-    width: 100%;
     text-align: center;
   }
 
-  .about-sub {
-    letter-spacing: 0.2em;
+  .about-content {
+    padding-block: 2rem;
   }
 
-  .about-main {
-    font-size: 1.4em;
-    padding-bottom: 1rem;
+  .about-img {
+    align-self: center;
   }
 }
 
@@ -423,4 +451,5 @@ header{
 }
 
 /* Reference */
-/* https://youtu.be/HbBMp6yUXO0 */
+
+/* Navbar -> https://youtu.be/HbBMp6yUXO0 */
