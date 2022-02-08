@@ -35,6 +35,11 @@
   border-radius: 10px;
 }
 
+:focus-visible {
+  outline-offset: 4px;
+  outline: 4px solid var(--secondary);
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -52,8 +57,10 @@ p,
 figure,
 blockquote,
 dl,
-dd {
+dd,
+ul {
   margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -64,12 +71,11 @@ h4 {
 }
 
 @media (max-width: 45rem) {
-
   h1,
   h2,
   h3,
   h4 {
-    font-size: 1em;
+    font-size: 1.6em;
   }
 }
 
@@ -143,8 +149,13 @@ html {
 
 .sub {
   color: var(--dark-grey);
-  letter-spacing: 0.8em;
   padding-bottom: 0.2rem;
+}
+
+@media (max-width: 45rem) {
+  .sub {
+    letter-spacing: normal;
+  }
 }
 
 /* Set core body defaults */
@@ -165,6 +176,10 @@ a:not([class]) {
 a {
   color: var(--dark);
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 /* Make images easier to work with */
@@ -427,10 +442,6 @@ select {
   .about {
     height: fit-content;
   }
-
-  .about-title {
-    font-size: 1.4em;
-  }
 }
 
 @media (max-width: 45rem) {
@@ -464,6 +475,7 @@ select {
 }
 
 .cards {
+  /* max-width: 100%; */
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   margin-block: 2rem;
 }
@@ -490,10 +502,6 @@ select {
 }
 
 @media (max-width: 1100px) {
-  .services-title {
-    font-size: 1.4em;
-  }
-
   .services-head {
     padding-inline: 2rem;
   }
@@ -509,6 +517,7 @@ select {
 
 .team-section {
   width: 100%;
+  padding-block: 4rem;
   background-color: var(--dark);
 }
 
@@ -534,7 +543,7 @@ select {
   align-items: center;
   text-align: center;
   justify-content: center;
-  margin: 0 0 2.5rem 0 ;
+  margin: 0 0 2.5rem 0;
   padding: 2rem;
   border-radius: 10px;
 }
@@ -545,7 +554,7 @@ select {
 }
 
 .team-card_role {
-  margin-block: .7rem;
+  margin-block: 0.7rem;
 }
 
 .profile-pic {
@@ -559,7 +568,7 @@ select {
 }
 
 .ruban {
-  background-image: url("https://images.unsplash.com/photo-1521572267360-ee0c2909d518?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+  background-image: url("https://bit.ly/3ryRxaV");
 }
 
 .snowin {
@@ -570,11 +579,183 @@ select {
   .team-head {
     padding-inline: 10%;
   }
-  .team-title {
-    font-size: 1.4rem;
-  }
   .team-card {
     width: 18rem;
+  }
+}
+
+.contact-section {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding-block: 4rem;
+}
+
+.contact-section > * {
+  margin-block: 2rem 4rem;
+}
+
+.contact-head {
+  text-align: center;
+}
+
+.form {
+  max-width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "name email"
+    "message message"
+    "submit submit";
+  gap: 2rem;
+  font-size: 1.4rem;
+  justify-content: center;
+  margin-inline: 4rem;
+}
+
+.name-div {
+  grid-area: name;
+}
+
+.email-div {
+  grid-area: email;
+}
+
+.messgae-div {
+  grid-area: message;
+}
+
+.submit-div {
+  grid-area: submit;
+}
+
+.form-group {
+  flex-direction: column;
+}
+
+.form-group input,
+textarea {
+  border-radius: 5px;
+  border: 2px solid var(--dark);
+  padding: 0.8rem;
+}
+
+#message {
+  height: 15rem;
+}
+
+.submit-div input {
+  border: 0;
+}
+
+@media (max-width: 45rem) {
+  .contact-section > * {
+    margin-block: 1rem 2rem;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "email"
+      "message"
+      "submit";
+  }
+
+  .form-group input,
+  textarea {
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #message {
+    height: 10rem;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark);
+  padding: 2rem 4rem;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.footer,
+.footer a {
+  color: var(--white);
+}
+
+.footer-links {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.footer-brand {
+  text-align: left;
+  max-width: 15rem;
+}
+
+.social-links {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+}
+
+.footer-service {
+  text-align: right;
+}
+
+.footer-services_links > * {
+  display: block;
+}
+
+.others {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.terms-policy {
+  text-decoration: underline;
+}
+
+@media (max-width: 1100px) {
+  .social-links {
+    max-width: 20rem;
+  }
+}
+
+@media (max-width: 45rem) {
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    text-align: center;
+  }
+
+  .social-links {
+    max-width: 10rem;
+  }
+
+  .social-links > ul {
+    gap: 0;
+  }
+
+  .footer-service {
+    text-align: center;
+  }
+
+  .others {
+    text-align: center;
+    flex-direction: column;
+  }
+  .terms-policy {
+    flex-direction: column;
   }
 }
 

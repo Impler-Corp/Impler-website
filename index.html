@@ -1,190 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Page Title -->
     <title>Impler - Innovative In Implementation</title>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" href="./assets/Images/logo.png" type="image/png">
+    <link rel="icon" href="./assets/Images/logo.png" type="image/png" />
 
     <!-- Google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- StyleSheet -->
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/style.css" />
 
     <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- Script -->
     <script src="./js/index.js" defer></script>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <!-- Navigation bar -->
     <header class="primary-header flex container">
-        <div class="logo flex">
-            <img src="./assets/Images/logo.png" alt="logo">
-            <h1 class="brand-name">IMPLER</h1>
-        </div>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" onclick="toggleNav()">
-        </button>
-        <nav id="primary-nav" class="primary-nav flex" data-visible="false">
-            <a href="#home" class="nav-link" onclick="toggleNav()">Home</a>
-            <a href="#about" class="nav-link" onclick="toggleNav()">About</a>
-            <a href="#services" class="nav-link" onclick="toggleNav()">Services</a>
-            <a href="#team" class="nav-link" onclick="toggleNav()">Team</a>
-            <a href="mailto:implerofficial@gmail.com" onclick="toggleNav()"><button
-                    class="btn btn-light">Contact</button></a>
-        </nav>
+      <div class="logo flex">
+        <img src="./assets/Images/logo.png" alt="logo" />
+        <h1 class="brand-name">IMPLER</h1>
+      </div>
+      <button
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        onclick="toggleNav()"
+      ></button>
+      <nav id="primary-nav" class="primary-nav flex" data-visible="false">
+        <a href="#home" class="nav-link" onclick="toggleNav()">Home</a>
+        <a href="#about" class="nav-link" onclick="toggleNav()">About</a>
+        <a href="#services" class="nav-link" onclick="toggleNav()">Services</a>
+        <a href="#team" class="nav-link" onclick="toggleNav()">Team</a>
+        <a href="mailto:implerofficial@gmail.com" onclick="toggleNav()"
+          ><button class="btn btn-light">Contact</button></a
+        >
+      </nav>
     </header>
 
     <!-- Home Section -->
     <section id="home" class="home flex container">
-        <div class="main-content flex">
-            <h1>Innovative In Implementation</h1>
-            <p>We help startups to reshape their workspace culture online.</p>
-            <div class="cta-buttons flex">
-                <a href="#">
-                    <button class="btn">
-                        Project Request
-                    </button>
-                </a>
-                <a href="#">
-                    <button class="btn btn-light">
-                        Let's talk
-                    </button>
-                </a>
-            </div>
+      <div class="main-content flex">
+        <h1>Innovative In Implementation</h1>
+        <p>We help startups to reshape their workspace culture online.</p>
+        <div class="cta-buttons flex">
+          <a href="#">
+            <button class="btn">Project Request</button>
+          </a>
+          <a href="#">
+            <button class="btn btn-light">Let's talk</button>
+          </a>
         </div>
-        <div class="hero-img">
-            <img src="./assets/Images/man-with-coffee.png" alt="">
-        </div>
+      </div>
+      <div class="hero-img">
+        <img src="./assets/Images/man-with-coffee.png" alt="" />
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="about-img">
-            <img src="./assets/Images/about-img.png" alt="about-pic">
-        </div>
-        <div class="about-content">
-            <p class="sub">About our Brand</p>
-            <h1 class="about-title">We are an Experienced Freelancers</h1>
-            <p class="about-desc">IMPLER is a product/service brand that has a collaborative team of freelancers. We had
-                the elite product designers and
-                developers for small startups and top leading brands. We make an extensive range of application(web,
-                ios, and android)
-                designs to build or transform businesses online. We are in practice to keep our designs unique,
-                innovative, and
-                essential in Implementing online. We are precise in rebuilding brands and providing specialist technical
-                online
-                supports.</p>
-        </div>
+      <div class="about-img">
+        <img src="./assets/Images/about-img.png" alt="about-pic" />
+      </div>
+      <div class="about-content">
+        <p class="sub">About our Brand</p>
+        <h1 class="about-title">We are an Experienced Freelancers</h1>
+        <p class="about-desc">
+          IMPLER is a product/service brand that has a collaborative team of
+          freelancers. We had the elite product designers and developers for
+          small startups and top leading brands. We make an extensive range of
+          application(web, ios, and android) designs to build or transform
+          businesses online. We are in practice to keep our designs unique,
+          innovative, and essential in Implementing online. We are precise in
+          rebuilding brands and providing specialist technical online supports.
+        </p>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services container flex">
-        <div class="services-head">
-            <p class="sub">What We Do</p>
-            <h1 class="services-title">Our Best Services</h1>
-            <p class="services-desc">Some of our Best Serivices we provide to make
-                every startups to stand out from the crowd!</p>
+      <div class="services-head">
+        <p class="sub">What We Do</p>
+        <h1 class="services-title">Our Best Services</h1>
+        <p class="services-desc">
+          Some of our Best Serivices we provide to make every startups to stand
+          out from the crowd!
+        </p>
+      </div>
+      <div class="cards grid">
+        <div class="card">
+          <img src="./assets/Images/service-branding.png" alt="service-image" />
+          <div class="card-content">
+            <h1 class="card-content_head">Branding</h1>
+            <p class="card-content_desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+              alias suscipit aliquam soluta magnam, illum amet minus veritatis
+              dicta dolor!
+            </p>
+          </div>
         </div>
-        <div class="cards grid">
-            <div class="card">
-                <img src="./assets/Images/service-branding.png" alt="service-image">
-                <div class="card-content">
-                    <h1 class="card-content_head">Branding</h1>
-                    <p class="card-content_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi alias
-                        suscipit aliquam soluta magnam, illum amet minus veritatis dicta dolor!</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/Images/service-dev.png" alt="service-image">
-                <div class="card-content">
-                    <h1 class="card-content_head">Development</h1>
-                    <p class="card-content_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi alias
-                        suscipit aliquam soluta magnam, illum amet minus veritatis dicta dolor!</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/Images/service-marketing.png" alt="service-image">
-                <div class="card-content">
-                    <h1 class="card-content_head">Marketing</h1>
-                    <p class="card-content_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi alias
-                        suscipit aliquam soluta magnam, illum amet minus veritatis dicta dolor!</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/Images/service-design.png" alt="service-image">
-                <div class="card-content">
-                    <h1 class="card-content_head">Designing</h1>
-                    <p class="card-content_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi alias
-                        suscipit aliquam soluta magnam, illum amet minus veritatis dicta dolor!</p>
-                </div>
-            </div>
+        <div class="card">
+          <img src="./assets/Images/service-dev.png" alt="service-image" />
+          <div class="card-content">
+            <h1 class="card-content_head">Development</h1>
+            <p class="card-content_desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+              alias suscipit aliquam soluta magnam, illum amet minus veritatis
+              dicta dolor!
+            </p>
+          </div>
         </div>
+        <div class="card">
+          <img
+            src="./assets/Images/service-marketing.png"
+            alt="service-image"
+          />
+          <div class="card-content">
+            <h1 class="card-content_head">Marketing</h1>
+            <p class="card-content_desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+              alias suscipit aliquam soluta magnam, illum amet minus veritatis
+              dicta dolor!
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./assets/Images/service-design.png" alt="service-image" />
+          <div class="card-content">
+            <h1 class="card-content_head">Designing</h1>
+            <p class="card-content_desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+              alias suscipit aliquam soluta magnam, illum amet minus veritatis
+              dicta dolor!
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Team Section -->
     <section id="team" class="team-section">
-        <div class="team-head flex">
-            <p class="sub">Dedicated Support Team</p>
-            <h1 class="team-title">Our Team</h1>
-            <p class="team-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Nostrum autem similique obcaecati non magni rerum maxime Official.</p>
-        </div>
+      <div class="team-head flex">
+        <p class="sub">Dedicated Support Team</p>
+        <h1 class="team-title">Our Team</h1>
+        <p class="team-desc">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+          autem similique obcaecati non magni rerum maxime Official.
+        </p>
+      </div>
 
-        <div class="team-cards flex">
-            <div class="team-card flex">
-                <div class="profile-pic ruban"></div>
-                <div class="team-card_content">
-                    <h1 class="team-card_head">Ruban Gino Singh</h1>
-                    <h5 class="team-card_role">CEO</h5>
-                    <p class="team-card_body">Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit.
-                        Elementum neque amet hendrerit
-                        vulputate. Ut odio viverra justo
-                        vestibulum. Egestas ipsum leo
-                        lobortis</p>
-                </div>
-            </div>
-            <div class="team-card flex">
-                <div class="profile-pic snowin"></div>
-                <div class="team-card_content">
-                    <h1 class="team-card_head">Snowin</h1>
-                    <h5 class="team-card_role">CTO</h5>
-                    <p class="team-card_body">Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit.
-                        Elementum neque amet hendrerit
-                        vulputate. Ut odio viverra justo
-                        vestibulum. Egestas ipsum leo
-                        lobortis</p>
-                </div>
-            </div>
+      <div class="team-cards flex">
+        <div class="team-card flex">
+          <div class="profile-pic ruban"></div>
+          <div class="team-card_content">
+            <h1 class="team-card_head">Ruban Gino Singh</h1>
+            <h5 class="team-card_role">CEO</h5>
+            <p class="team-card_body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum
+              neque amet hendrerit vulputate. Ut odio viverra justo vestibulum.
+              Egestas ipsum leo lobortis
+            </p>
+          </div>
         </div>
-
+        <div class="team-card flex">
+          <div class="profile-pic snowin"></div>
+          <div class="team-card_content">
+            <h1 class="team-card_head">Snowin</h1>
+            <h5 class="team-card_role">CTO</h5>
+            <p class="team-card_body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum
+              neque amet hendrerit vulputate. Ut odio viverra justo vestibulum.
+              Egestas ipsum leo lobortis
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- contact form Section -->
-    <section class="contact-section">
-
+    <section id="contact" class="contact-section">
+      <h1 class="contact-head">Get In Touch</h1>
+      <form action="" class="form grid">
+        <div class="form-group name-div flex">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+          />
+        </div>
+        <div class="form-group email-div flex">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="Enter your email ID"
+          />
+        </div>
+        <div class="form-group flex messgae-div">
+          <label for="message">Messgae</label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Fell free to talk !"
+          ></textarea>
+        </div>
+        <div class="form-group flex submit-div">
+          <input
+            type="submit"
+            value="Submit"
+            name="submit"
+            id="submit"
+            class="btn"
+          />
+        </div>
+      </form>
     </section>
 
     <!-- Footer Section -->
-    <footer>
+    <footer class="footer flex">
+      <div class="footer-links flex">
+        <div class="footer-brand">
+          <h1>Impler</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            modi voluptatum ratione provident
+          </p>
+        </div>
+        <div class="social-links flex">
+          <h1>Follow Us!</h1>
+          <ul class="flex">
+            <li>
+              <a href="#">
+                <img src="./assets/Images/Facebook.png" alt="facebook image" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="./assets/Images/Instagram.png"
+                  alt="instagram image"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./assets/Images/Twitter.png" alt="twitter image" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./assets/Images/Dribble.png" alt="dribble image" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-service">
+          <h1>Services</h1>
+          <div class="footer-services_links">
+            <a href="#">Branding</a>
+            <a href="#">Design</a>
+            <a href="#">Marketing</a>
+            <a href="#">Development</a>
+            <a href="#">Testing</a>
+          </div>
+        </div>
+      </div>
 
+      <div class="others flex">
+        <div class="terms-policy flex">
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy & Policy</a>
+          <a href="#">Cookies</a>
+        </div>
+        <div class="copyright">
+          <p>Copyright@2022. All Rights Reserved</p>
+        </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
