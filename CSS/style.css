@@ -156,6 +156,12 @@ select {
 
 /* primary-header */
 
+header{
+    width: 100%;
+    position: fixed;
+    margin: 0;
+}
+
 .primary-header {
   justify-content: space-between;
   align-items: center;
@@ -277,7 +283,8 @@ select {
   background-image: url("../assets/Images/home-bg.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  height: 100vh;
 }
 
 .bg {
@@ -328,7 +335,7 @@ select {
 
 .hero-img {
   align-self: flex-end;
-  width: 60%;
+  width: 50%;
 }
 
 @media (max-width: 45rem) {
