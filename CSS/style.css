@@ -584,6 +584,7 @@ select {
   }
 }
 
+/* Contact Section */
 .contact-section {
   max-width: 60rem;
   margin: 0 auto;
@@ -641,6 +642,8 @@ textarea {
 
 #message {
   height: 15rem;
+  resize: vertical;
+  max-width: 100%;
 }
 
 .submit-div input {
@@ -701,7 +704,7 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30rem;
+  width: 20rem;
 }
 
 .footer-service {
