@@ -187,15 +187,15 @@
         <form id="my-form" action="https://formspree.io/f/xnqwpyow" method="POST" class="form grid">
             <div class="form-group name-div flex">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="Enter your name" />
+                <input type="text" name="name" id="name" placeholder="Enter your name" required/>
             </div>
             <div class="form-group email-div flex">
                 <label for="email">Email</label>
-                <input type="text" name="email" id="email" placeholder="Enter your email ID" />
+                <input type="email" name="email" id="email" placeholder="Enter your email ID" required/>
             </div>
             <div class="form-group flex messgae-div">
                 <label for="message">Messgae</label>
-                <textarea name="message" id="message" placeholder="Fell free to talk !"></textarea>
+                <textarea name="message" id="message" placeholder="Fell free to talk !" required></textarea>
             </div>
             <div class="form-group flex submit-div">
                 <input type="submit" value="Submit" name="submit" id="submit" class="btn" />
