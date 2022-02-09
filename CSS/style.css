@@ -166,6 +166,7 @@ body {
   font-family: "Nunito Sans", sans-serif;
   font-size: 18px;
   overflow-x: hidden;
+  color: var(--dark);
 }
 
 /* A elements that don't have a class get default styles */
@@ -326,6 +327,41 @@ select {
   .nav-toggle[aria-expanded="true"] {
     background-image: url("../assets/Images/menu-close.svg");
   }
+}
+
+/* Popup */
+
+.popup-container {
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-color: #00000090;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popup {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 25rem;
+  height: 12rem;
+  border-radius: 10px;
+  background-color: var(--white);
+  color: var(--dark);
+  box-shadow: 0 4px 34px #2b2d4220;
+  transition: all 0.5s ease-in-out;
+  transform: scale(0);
+}
+
+.popup button {
+  padding: 0.5rem 1.6rem;
 }
 
 /* Home section */
