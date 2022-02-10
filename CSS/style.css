@@ -840,6 +840,16 @@ textarea {
   }
 }
 
+/* Additional Pages styles */
+.back-arrow {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-5%, -50%);
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
 /* Reference */
 
 /* Navbar -> https://youtu.be/HbBMp6yUXO0 */
