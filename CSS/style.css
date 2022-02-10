@@ -198,6 +198,27 @@ select {
   font: inherit;
 }
 
+.theme-text{
+  color: var(--primary);
+}
+
+.inline-link{
+  background-color: var(--primary);
+  color: var(--white);
+}
+.inline-link:hover{
+  background-color: var(--white);
+  color: var(--dark);
+}
+
+.inline-link-light{
+  color: var(--primary);
+}
+.inline-link-light:hover{
+  background-color: var(--dark);
+  color: white;
+}
+
 /* primary-header */
 
 .primary-header {

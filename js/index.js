@@ -33,12 +33,12 @@ async function handleSubmit(event) {
   console.log(data.values);
 
   fetch(event.target.action, {
-    method: form.method,
-    body: data,
-    headers: {
-      Accept: "application/json",
-    },
-  })
+      method: form.method,
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    })
     .then((response) => {
       if (response.ok) {
         openPopup("Thank You For Contacting IMPLER!");
@@ -67,7 +67,7 @@ const footerCopyright = document.querySelector(".copyright p");
 
 const year = new Date().getFullYear();
 
-footerCopyright.textContent = `Copyright@${year}. All Rights Reserved`;
+footerCopyright.textContent = `Copyright@${year} | All Rights Reserved`;
 
 // Popup
 function closePopup() {
