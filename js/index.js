@@ -7,8 +7,6 @@ window.addEventListener("scroll", () => {
   primaryHeader.classList.toggle("sticky", window.scrollY > 0);
 });
 
-console.log("Window width: ", window.innerWidth);
-
 // Navbar Toggle Button
 function toggleNav() {
   const visiblity = nav.getAttribute("data-visible");
