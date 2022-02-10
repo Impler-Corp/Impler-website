@@ -13,9 +13,11 @@ function toggleNav() {
   if (visiblity === "false") {
     nav.setAttribute("data-visible", true);
     navToggle.setAttribute("aria-expanded", true);
+    document.querySelector("body").style.overflowY = "hidden";
   } else {
     nav.setAttribute("data-visible", false);
     navToggle.setAttribute("aria-expanded", false);
+    document.querySelector("body").style.overflowY = "scroll";
   }
 }
 
@@ -33,12 +35,12 @@ async function handleSubmit(event) {
   console.log(data.values);
 
   fetch(event.target.action, {
-      method: form.method,
-      body: data,
-      headers: {
-        Accept: "application/json",
-      },
-    })
+    method: form.method,
+    body: data,
+    headers: {
+      Accept: "application/json",
+    },
+  })
     .then((response) => {
       if (response.ok) {
         openPopup("Thank You For Contacting IMPLER!");

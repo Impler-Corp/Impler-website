@@ -53,6 +53,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 figure,
 blockquote,
@@ -63,10 +65,7 @@ ul {
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1 {
   font-size: 2.4em;
 }
 
@@ -198,31 +197,49 @@ select {
   font: inherit;
 }
 
-.theme-text{
-  color: var(--primary);
+.theme-text {
+  color: var(--secondary);
 }
 
-.inline-link{
-  background-color: var(--primary);
+.inline-link {
+  background-color: var(--secondary);
   color: var(--white);
+  transition: all 0.5s ease-in-out;
 }
-.inline-link:hover{
+.inline-link:hover {
   background-color: var(--white);
   color: var(--dark);
 }
 
-.inline-link-light{
+.inline-link-light {
+  color: var(--secondary);
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+.inline-link-light:hover {
   color: var(--primary);
 }
-.inline-link-light:hover{
-  background-color: var(--dark);
-  color: white;
+
+.inline-link-light::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0.1rem;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: all 0.5s ease-out;
+}
+
+.inline-link-light:hover::before {
+  background-color: var(--secondary);
+  transform: scaleX(1);
 }
 
 /* primary-header */
 
 .primary-header {
-  /* background-color: var(--white); */
   min-width: 100%;
   position: fixed;
   top: 0;
@@ -281,7 +298,7 @@ select {
   left: 0;
   background-color: var(--secondary);
   transform-origin: bottom right;
-  transition: transform 0.5s ease-out;
+  transition: transform 0.3s ease-out;
 }
 
 .nav-link:hover::after {
@@ -295,7 +312,7 @@ select {
   border-radius: 5px;
   padding: 0.5rem 1.5rem;
   border: 2px solid var(--secondary);
-  transition: 200ms ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .nav-btn:hover {
@@ -416,12 +433,17 @@ select {
   background-color: var(--secondary);
   color: var(--white);
   border: 2px solid var(--secondary);
+  transition: all 0.5s ease;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--primary);
 }
 
 .btn-light {
   background-color: var(--white);
   color: var(--dark);
-  transition: all 0.5s ease;
 }
 
 .btn-light:hover {
@@ -532,15 +554,13 @@ select {
 }
 
 .cards {
-  /* max-width: 100%; */
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   margin-block: 2rem;
 }
 
 .card {
-  width: 100%;
-  aspect-ratio: 1/1;
-  text-align: center;
+  max-width: 100%;
+  text-align: start;
   padding: 2rem;
   border-radius: 25px;
   background-color: var(--white);
@@ -594,24 +614,25 @@ select {
 }
 
 .team-card {
+  align-self: normal;
   background-color: var(--white);
   width: 20rem;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  justify-content: center;
   margin: 0 0 2.5rem 0;
   padding: 2rem;
   border-radius: 10px;
 }
 
-.team-card_head {
-  font-size: 1.5rem;
-  margin-top: 20px;
+.team-card_content {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.team-card_role {
-  margin-block: 0.7rem;
+.team-card_head {
+  font-size: 1.5rem;
 }
 
 .profile-pic {
