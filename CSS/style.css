@@ -36,8 +36,10 @@
 }
 
 :focus-visible {
-  outline-offset: 4px;
-  outline: 4px solid var(--secondary);
+  border-radius: 5px;
+  border: 1px solid var(--secondary);
+  outline-offset: 1px;
+  outline: 4px solid #ef233c90;
 }
 
 /* Box sizing rules */
@@ -70,7 +72,6 @@ h1 {
 }
 
 @media (max-width: 45rem) {
-
   h1,
   h2,
   h3,
@@ -410,7 +411,6 @@ select {
 .home {
   justify-content: space-between;
   align-items: center;
-  background-image: url("../assets/Images/home-bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -425,6 +425,88 @@ select {
 
 .main-content p {
   width: 20rem;
+}
+
+.box,
+.searchbar,
+.graph,
+.graph-paper,
+.piechart,
+.calender,
+.letter {
+  position: absolute;
+  z-index: -10;
+  transform-origin: center;
+  transform-box: fill-box;
+  width: 120px;
+}
+
+.box {
+  right: 50%;
+  top: 40%;
+  animation: float 2s infinite alternate ease;
+}
+
+.searchbar {
+  right: 70%;
+  top: 15%;
+  animation: float 2.6s infinite alternate ease;
+  width: 140px;
+}
+
+.graph {
+  top: 20%;
+  right: 34%;
+  animation: float 3.1s infinite alternate ease;
+}
+
+.graph-paper {
+  top: 30%;
+  right: 0;
+  animation: float 2.4s infinite alternate ease;
+}
+
+.piechart {
+  bottom: 12%;
+  left: 40%;
+  animation: float 3.2s infinite alternate ease;
+  width: 140px;
+}
+.calender {
+  left: 20%;
+  bottom: 25%;
+  animation: float 2.5s infinite alternate ease;
+}
+
+.letter {
+  left: 0;
+  bottom: 15%;
+  animation: float 3s infinite alternate ease;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
+@media (max-width: 1080px) {
+  .home {
+    background-image: url("../assets/Images/home-bg.png");
+  }
+
+  .box,
+  .searchbar,
+  .graph,
+  .graph-paper,
+  .piechart,
+  .calender,
+  .letter {
+    display: none;
+  }
 }
 
 .btn {
@@ -619,7 +701,7 @@ select {
 .team-card {
   align-self: normal;
   background-color: var(--white);
-  width: 20rem;
+  width: 25rem;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -673,7 +755,7 @@ select {
   padding-block: 4rem;
 }
 
-.contact-section>* {
+.contact-section > * {
   margin-block: 2rem 4rem;
 }
 
@@ -722,6 +804,11 @@ textarea {
   padding: 0.8rem;
 }
 
+.form-group input:focus,
+textarea:focus {
+  border: 1px solid var(--secondary);
+}
+
 #message {
   height: 15rem;
   resize: vertical;
@@ -733,7 +820,7 @@ textarea {
 }
 
 @media (max-width: 45rem) {
-  .contact-section>* {
+  .contact-section > * {
     margin-block: 1rem 2rem;
   }
 
@@ -793,7 +880,7 @@ textarea {
   text-align: right;
 }
 
-.footer-services_links>* {
+.footer-services_links > * {
   display: block;
 }
 
@@ -827,7 +914,7 @@ textarea {
     max-width: 10rem;
   }
 
-  .social-links>ul {
+  .social-links > ul {
     gap: 0;
   }
 

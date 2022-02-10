@@ -1,291 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Page Title -->
+    <title>Impler - Innovative In Implementation</title>
 
-<head>
-  <!-- Page Title -->
-  <title>Impler - Innovative In Implementation</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="IMPLER is a product/service brand with a collaborative team of freelancers. We had the elite product designers and developers on board for small startups and leading brands."
+    />
+    <meta
+      name="keywords"
+      content="Impler, online business, marketing, digital marketing, ruban gino singh, snowin, web design, web development"
+    />
+    <meta name="robots" content="index" follow />
 
-  <meta name="description"
-    content="IMPLER is a product/service brand with a collaborative team of freelancers. We had the elite product designers and developers on board for small startups and leading brands." />
-  <meta name="keywords"
-    content="Impler, online business, marketing, digital marketing, ruban gino singh, snowin, web design, web development" />
-  <meta name="robots" content="index" follow />
+    <link rel="icon" href="./assets/Images/logo.png" type="image/png" />
 
-  <link rel="icon" href="./assets/Images/logo.png" type="image/png" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap" rel="stylesheet" />
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="./CSS/style.css" />
 
-  <!-- StyleSheet -->
-  <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- Fontawesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Script -->
+    <script src="./js/index.js" defer></script>
+  </head>
 
-  <!-- Script -->
-  <script src="./js/index.js" defer></script>
-</head>
+  <body>
+    <!-- Navigation bar -->
+    <header class="primary-header flex container">
+      <a href="#">
+        <div class="logo flex">
+          <img src="./assets/Images/logo.png" alt="logo" />
+          <h1 class="brand-name">IMPLER</h1>
+        </div>
+      </a>
+      <button
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        onclick="toggleNav()"
+      ></button>
+      <nav id="primary-nav" class="primary-nav flex" data-visible="false">
+        <a href="#home" class="nav-link" onclick="toggleNav()">Home</a>
+        <a href="#about" class="nav-link" onclick="toggleNav()">About</a>
+        <a href="#services" class="nav-link" onclick="toggleNav()">Services</a>
+        <a href="#team" class="nav-link" onclick="toggleNav()">Team</a>
+        <a href="#contact" onclick="toggleNav()"
+          ><button class="btn btn-light">Contact</button></a
+        >
+      </nav>
+    </header>
 
-<body>
-  <!-- Navigation bar -->
-  <header class="primary-header flex container">
-    <a href="#">
-      <div class="logo flex">
-        <img src="./assets/Images/logo.png" alt="logo" />
-        <h1 class="brand-name">IMPLER</h1>
+    <!-- Popup -->
+    <div class="popup-container grid">
+      <div class="popup flex">
+        <p class="popup-message">This content is to debug the popup window.!</p>
+        <button class="btn popup-btn" onclick="closePopup()">Close</button>
       </div>
-    </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" onclick="toggleNav()"></button>
-    <nav id="primary-nav" class="primary-nav flex" data-visible="false">
-      <a href="#home" class="nav-link" onclick="toggleNav()">Home</a>
-      <a href="#about" class="nav-link" onclick="toggleNav()">About</a>
-      <a href="#services" class="nav-link" onclick="toggleNav()">Services</a>
-      <a href="#team" class="nav-link" onclick="toggleNav()">Team</a>
-      <a href="#contact" onclick="toggleNav()"><button class="btn btn-light">Contact</button></a>
-    </nav>
-  </header>
+    </div>
 
-  <!-- Popup -->
-  <div class="popup-container grid">
-    <div class="popup flex">
-      <p class="popup-message">This content is to debug the popup window.!</p>
-      <button class="btn popup-btn" onclick="closePopup()">Close</button>
-    </div>
-  </div>
-
-  <!-- Home Section -->
-  <section id="home" class="home flex container">
-    <div class="main-content flex">
-      <h1>Innovative In Implementation</h1>
-      <p>We help startups to reshape their workspace culture online.</p>
-      <div class="cta-buttons flex">
-        <a href="#contact">
-          <button class="btn">Project Request</button>
-        </a>
-        <a href="https://m.me/implerofficial.in" target="_blank">
-          <button class="btn btn-light">Let's talk</button>
-        </a>
-      </div>
-    </div>
-    <div class="hero-img">
-      <img src="./assets/Images/man-with-coffee.png" alt="a-man-with-ipad-and-coffee" />
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="about-img">
-      <img src="./assets/Images/about-img.png" alt="about-pic" />
-    </div>
-    <div class="about-content">
-      <p class="sub">About our Brand</p>
-      <h1 class="about-title">We are Experienced Freelancers</h1>
-      <p class="about-desc">
-        IMPLER is a product/service brand with a collaborative team of
-        freelancers. We have elite product designers and developers on board
-        to provide help for startups and leading brands. We make extensive
-        range of application(web, ios, and android) designs to build and
-        develop businesses online. Our designs are unique and innovative.
-        Implementing innovative thoughts online is our core value. We also
-        rebuild brands by providing technical support online.
-      </p>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="services container flex">
-    <div class="services-head">
-      <p class="sub">What We Do</p>
-      <h1 class="services-title">
-        Our <span class="theme-text">Best</span> Services
-      </h1>
-      <p class="services-desc">
-        Services that we provide to make every startup stand out from the
-        crowd!
-      </p>
-    </div>
-    <div class="cards grid">
-      <div class="card">
-        <img src="./assets/Images/service-branding.png" alt="service-image" />
-        <div class="card-content">
-          <h1 class="card-content_head">Branding</h1>
-          <p class="card-content_desc">
-            We provide online support to build & develop your dream business.
-            We maintain the sustainability of your brand. We will manage
-            everything starting from your logo design upto your social media.
-          </p>
+    <!-- Home Section -->
+    <section id="home" class="home flex container">
+      <div class="main-content flex">
+        <div class="box">
+          <img src="./assets/Images/box.png" alt="" />
+        </div>
+        <div class="searchbar">
+          <img src="./assets/Images/searchbar.png" alt="" />
+        </div>
+        <div class="graph">
+          <img src="./assets/Images/graph.png" alt="" />
+        </div>
+        <div class="graph-paper">
+          <img src="./assets/Images/graph-paper.png" alt="" />
+        </div>
+        <div class="piechart">
+          <img src="./assets/Images/piechart.png" alt="" />
+        </div>
+        <div class="calender">
+          <img src="./assets/Images/calendar.png" alt="" />
+        </div>
+        <div class="letter">
+          <img src="./assets/Images/letter.png" alt="" />
+        </div>
+        <h1>Innovative In Implementation</h1>
+        <p>We help startups to reshape their workspace culture online.</p>
+        <div class="cta-buttons flex">
+          <a href="#contact">
+            <button class="btn">Project Request</button>
+          </a>
+          <a href="https://m.me/implerofficial.in" target="_blank">
+            <button class="btn btn-light">Let's talk</button>
+          </a>
         </div>
       </div>
-      <div class="card">
-        <img src="./assets/Images/service-dev.png" alt="service-image" />
-        <div class="card-content">
-          <h1 class="card-content_head">Development</h1>
-          <p class="card-content_desc">
-            We make your ideas into reality by developing
-            static/dynamic/responsive websites and expanding your online
-            business all around the world. We can make your existing website
-            more responsive and user-friendly.
-          </p>
-        </div>
+      <div class="hero-img">
+        <img
+          src="./assets/Images/man-with-coffee.png"
+          alt="a-man-with-ipad-and-coffee"
+        />
       </div>
-      <div class="card">
-        <img src="./assets/Images/service-marketing.png" alt="service-image" />
-        <div class="card-content">
-          <h1 class="card-content_head">Marketing</h1>
-          <p class="card-content_desc">
-            We do a brand collaboration for external marketing. Our marketing
-            campaigns are enough to achieve the customer needs to fulfill
-            their satisfaction. Also, We help you refine your idea and
-            benchmark against your competitors.
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./assets/Images/service-design.png" alt="service-image" />
-        <div class="card-content">
-          <h1 class="card-content_head">Designing</h1>
-          <p class="card-content_desc">
-            Our experienced designers can provide world-class web designs, app
-            designs, and social media graphics to attract global customers for
-            your business.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Team Section -->
-  <section id="team" class="team-section">
-    <div class="team-head flex">
-      <p class="sub">Dedicated Support Team</p>
-      <h1 class="team-title">Our Team</h1>
-      <p class="team-desc">
-        Our team has experienced Designers, Developers, and Marketers. Mail
-        your resume to
-        <a href="mailto:career.impler@gmail.com" class="inline-link">career.impler@gmail.com</a>
-        to join as a freelancer in IMPLER.
-      </p>
-    </div>
-
-    <div class="team-cards flex">
-      <div class="team-card flex">
-        <div class="profile-pic ruban"></div>
-        <div class="team-card_content flex">
-          <h1 class="team-card_head">Ruban Gino Singh</h1>
-          <h5 class="team-card_role">CEO</h5>
-          <p class="team-card_body">
-            Founder and CEO of IMPLER. Handling brand organizational
-            structure, strategy, and the board members. Primary builder,
-            designer, and senior developer. Visit <a href="https://rubangino.in/" class="inline-link-light" target="_blank">RubanGino.in</a>
-            to know more about him.
-          </p>
-        </div>
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="about-img">
+        <img src="./assets/Images/about-img.png" alt="about-pic" />
       </div>
-
-      <div class="team-card flex">
-        <div class="profile-pic snowin"></div>
-        <div class="team-card_content flex">
-          <h1 class="team-card_head">Snowin</h1>
-          <h5 class="team-card_role">CTO</h5>
-          <p class="team-card_body">
-            Co-Founder and CTO of IMPLER. Handling the information technology
-            development, technological resources and interest and
-            technological strategies. Primary builder, designer, and senior
-            developer. Visit <a href="https://devsnow.in/" class="inline-link-light" target="_blank">devsnow.in</a>
-            to know more about him.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- contact form Section -->
-  <section id="contact" class="contact-section">
-    <h1 class="contact-head">Get In Touch</h1>
-    <form id="my-form" action="https://formspree.io/f/xnqwpyow" method="POST" class="form grid">
-      <div class="form-group name-div flex">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" placeholder="Enter your name" required />
-      </div>
-      <div class="form-group email-div flex">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="Enter your email ID" required />
-      </div>
-      <div class="form-group flex messgae-div">
-        <label for="message">Messgae</label>
-        <textarea name="message" id="message" placeholder="Feel free to talk !" required></textarea>
-      </div>
-      <div class="form-group flex submit-div">
-        <input type="submit" value="Send Message" name="submit" id="submit" class="btn" />
-      </div>
-    </form>
-  </section>
-
-  <!-- Footer Section -->
-  <footer class="footer flex">
-    <div class="footer-links flex">
-      <div class="footer-brand">
-        <h1><a href="#">Impler</a></h1>
-        <p>
-          <!-- Change it -->
-          Product & Services
+      <div class="about-content">
+        <p class="sub">About our Brand</p>
+        <h1 class="about-title">We are Experienced Freelancers</h1>
+        <p class="about-desc">
+          IMPLER is a product/service brand with a collaborative team of
+          freelancers. We have elite product designers and developers on board
+          to provide help for startups and leading brands. We make extensive
+          range of application(web, ios, and android) designs to build and
+          develop businesses online. Our designs are unique and innovative.
+          Implementing innovative thoughts online is our core value. We also
+          rebuild brands by providing technical support online.
         </p>
       </div>
-      <div class="social-links flex">
-        <h1>Follow Us!</h1>
-        <ul class="flex">
-          <li>
-            <a href="https://www.facebook.com/implerofficial.in">
-              <img src="./assets/Images/Facebook.png" alt="facebook image" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/impler_official/">
-              <img src="./assets/Images/Instagram.png" alt="instagram image" />
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/impler_official">
-              <img src="./assets/Images/Twitter.png" alt="twitter image" />
-            </a>
-          </li>
-          <li>
-            <a href="https://dribbble.com/impler_official">
-              <img src="./assets/Images/Dribble.png" alt="dribble image" />
-            </a>
-          </li>
-        </ul>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services container flex">
+      <div class="services-head">
+        <p class="sub">What We Do</p>
+        <h1 class="services-title">
+          Our <span class="theme-text">Best</span> Services
+        </h1>
+        <p class="services-desc">
+          Services that we provide to make every startup stand out from the
+          crowd!
+        </p>
       </div>
-      <div class="footer-service">
-        <h1>Services</h1>
-        <div class="footer-services_links">
-          <a href="#services">Branding</a>
-          <a href="#services">Design</a>
-          <a href="#services">Marketing</a>
-          <a href="#services">Development</a>
-          <a href="#services">Testing</a>
+      <div class="cards grid">
+        <div class="card">
+          <img src="./assets/Images/service-branding.png" alt="service-image" />
+          <div class="card-content">
+            <h1 class="card-content_head">Branding</h1>
+            <p class="card-content_desc">
+              We provide online support to build & develop your dream business.
+              We maintain the sustainability of your brand. We will manage
+              everything starting from your logo design upto your social media.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./assets/Images/service-dev.png" alt="service-image" />
+          <div class="card-content">
+            <h1 class="card-content_head">Development</h1>
+            <p class="card-content_desc">
+              We make your ideas into reality by developing
+              static/dynamic/responsive websites and expanding your online
+              business all around the world. We can make your existing website
+              more responsive and user-friendly.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="./assets/Images/service-marketing.png"
+            alt="service-image"
+          />
+          <div class="card-content">
+            <h1 class="card-content_head">Marketing</h1>
+            <p class="card-content_desc">
+              We do brand collaboration for external marketing. Our marketing
+              campaigns are enough to achieve the customer needs to fulfill
+              their satisfaction. Also, we help you refine your idea and
+              benchmark against your competitors.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./assets/Images/service-design.png" alt="service-image" />
+          <div class="card-content">
+            <h1 class="card-content_head">Designing</h1>
+            <p class="card-content_desc">
+              Our experienced designers can provide world-class web designs, app
+              designs, and social media graphics to attract global customers for
+              your business.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="others flex">
-      <div class="terms-policy flex">
-        <a href="/pages/terms&conditions.html" target="_blank">Terms & Conditions</a>
-        <a href="/pages/privacy&policy.html" target="_blank">Privacy & Policy</a>
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+      <div class="team-head flex">
+        <p class="sub">Dedicated Support Team</p>
+        <h1 class="team-title">Our Team</h1>
+        <p class="team-desc">
+          Our team has experienced Designers, Developers, and Marketers. Mail
+          your resume to
+          <a href="mailto:career.impler@gmail.com" class="inline-link"
+            >career.impler@gmail.com</a
+          >
+          to join as a freelancer in IMPLER.
+        </p>
       </div>
-      <div class="copyright">
-        <p></p>
-      </div>
-    </div>
-  </footer>
-</body>
 
+      <div class="team-cards flex">
+        <div class="team-card flex">
+          <div class="profile-pic ruban"></div>
+          <div class="team-card_content flex">
+            <h1 class="team-card_head">Ruban Gino Singh</h1>
+            <h5 class="team-card_role">CEO</h5>
+            <p class="team-card_body">
+              Founder and CEO of IMPLER. Handling brand organizational
+              structure, strategy, and the board members. Primary builder,
+              designer, and senior developer. Visit
+              <a
+                href="https://rubangino.in/"
+                class="inline-link-light"
+                target="_blank"
+                >RubanGino.in</a
+              >
+              to know more about him.
+            </p>
+          </div>
+        </div>
+
+        <div class="team-card flex">
+          <div class="profile-pic snowin"></div>
+          <div class="team-card_content flex">
+            <h1 class="team-card_head">Snowin</h1>
+            <h5 class="team-card_role">CTO</h5>
+            <p class="team-card_body">
+              Co-Founder and CTO of IMPLER. Handling the information technology
+              development, technological resources and interest and
+              technological strategies. Primary builder, designer, and senior
+              developer. Visit
+              <a
+                href="https://devsnow.in/"
+                class="inline-link-light"
+                target="_blank"
+                >DevSnow.in</a
+              >
+              to know more about him.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact form Section -->
+    <section id="contact" class="contact-section">
+      <h1 class="contact-head">Get In Touch</h1>
+      <form
+        id="my-form"
+        action="https://formspree.io/f/xnqwpyow"
+        method="POST"
+        class="form grid"
+      >
+        <div class="form-group name-div flex">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group email-div flex">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email ID"
+            required
+          />
+        </div>
+        <div class="form-group flex messgae-div">
+          <label for="message">Messgae</label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Feel free to talk !"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group flex submit-div">
+          <input
+            type="submit"
+            value="Send Message"
+            name="submit"
+            id="submit"
+            class="btn"
+          />
+        </div>
+      </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer flex">
+      <div class="footer-links flex">
+        <div class="footer-brand">
+          <h1><a href="#">Impler</a></h1>
+          <p>
+            <!-- Change it -->
+            Product & Services
+          </p>
+        </div>
+        <div class="social-links flex">
+          <h1>Follow Us!</h1>
+          <ul class="flex">
+            <li>
+              <a
+                href="https://www.facebook.com/implerofficial.in"
+                target="_blank"
+              >
+                <img src="./assets/Images/Facebook.png" alt="facebook image" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/impler_official/"
+                target="_blank"
+              >
+                <img
+                  src="./assets/Images/Instagram.png"
+                  alt="instagram image"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/impler_official" target="_blank">
+                <img src="./assets/Images/Twitter.png" alt="twitter image" />
+              </a>
+            </li>
+            <li>
+              <a href="https://dribbble.com/impler_official" target="_blank">
+                <img src="./assets/Images/Dribble.png" alt="dribble image" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-service">
+          <h1>Services</h1>
+          <div class="footer-services_links">
+            <a href="#services">Branding</a>
+            <a href="#services">Design</a>
+            <a href="#services">Marketing</a>
+            <a href="#services">Development</a>
+            <a href="#services">Testing</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="others flex">
+        <div class="terms-policy flex">
+          <a href="/pages/terms&conditions.html" target="_blank"
+            >Terms & Conditions</a
+          >
+          <a href="/pages/privacy&policy.html" target="_blank"
+            >Privacy & Policy</a
+          >
+        </div>
+        <div class="copyright">
+          <p></p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
