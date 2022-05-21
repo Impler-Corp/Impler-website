@@ -746,12 +746,13 @@ select {
   aspect-ratio: 1 / 1;
 }
 
+/* Image Updated  */
 .ruban {
-  background-image: url("https://bit.ly/3ryRxaV");
+  background-image: url("/assets/Images/ruban.jpg");
 }
 
 .snowin {
-  background-image: url("https://bit.ly/3oyWAGt");
+  background-image: url("/assets/Images/devsnow.jpg");
 }
 
 @media (max-width: 45rem) {
